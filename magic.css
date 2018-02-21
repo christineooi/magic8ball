@@ -1,0 +1,26 @@
+body {
+    font-family: fantasy;
+}
+
+header {
+    text-align: center;
+}
+
+.imgContainer {
+    margin: auto;
+    position: relative;
+    background: url("magiceightball.jpg");
+    background-size: 500px 500px;
+    width: 500px;
+    height: 500px;
+}
+
+.message {
+    position: absolute;
+    bottom: 235px;
+    left: 200px;
+    width: 100px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+  }

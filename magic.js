@@ -21,10 +21,18 @@ const answers = [
     "Very doubtful"
 ];
 
-document.getElementById("imgContainer").addEventListener("click", getMagicBallAnswer);
+document.getElementById("imgContainer").addEventListener("click", animateBall);
+
+function animateBall() {
+    document.getElementById("message").innerHTML = "";
+    // Animate by adding class
+    document.getElementById("imgContainer").classList.remove("shakeclass");
+    void document.getElementById("imgContainer").offsetWidth;
+    document.getElementById("imgContainer").classList.add("shakeclass");
+    setTimeout(getMagicBallAnswer, 2000);
+}
 
 function getMagicBallAnswer() {
     var getRandomAnswer = answers[Math.floor(Math.random() * answers.length)];
-
-      document.getElementById("message").innerHTML = getRandomAnswer;
+    document.getElementById("message").innerHTML = getRandomAnswer;
   }
